@@ -35,3 +35,5 @@ sysinfo.txt
 
 # OSX
 .DS_Store
+
+*.aar

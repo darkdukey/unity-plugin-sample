@@ -9,7 +9,7 @@ import com.unity3d.player.UnityPlayer;
 
 public class My_Plugin extends Fragment
 {
-    public static My_Plugin instance;
+    private static My_Plugin instance;
     private static final String TAG = "My_Plugin";
 
     public static void start() {
@@ -17,6 +17,10 @@ public class My_Plugin extends Fragment
 
         //Add fragment to the current Unity Activity
         UnityPlayer.currentActivity.getFragmentManager().beginTransaction().add(instance, "My_Plugin").commit();
+    }
+
+    public static My_Plugin getInstance() {
+        return instance;
     }
 
     @Override
